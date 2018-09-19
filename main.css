@@ -1,9 +1,97 @@
-#gamebox{
+/*#gamebox{
 	border: 1px solid red;
-	padding: 10px;
+	padding: 0px;
+
+}*/
+
+/*#questionbox{
+	border: 1px solid black;
+	width: 200px;
+}
+
+#questionNumber{
+	width: 200px;
+	margin: 0px;
+
 
 }
 
-#question{
-	border: 1px solid black;
+
+#userAnswer{
+	width: 200px;
+	height: 40px;
+	font-size: 30px;
+}
+
+#placeholderQuestion{
+	width: 200px;
+
+}
+
+#placeholderPoints{
+
+}*/
+
+#fightingrow{
+	height: 600px;
+}
+
+#zelda{
+	height: 400px;
+	margin-top: 100px;
+	position:absolute;
+	z-index: 2;
+}
+
+#dragon{
+	position: absolute;
+	margin-top: 100px;
+	height: 400px;
+	z-index: -1;
+}
+
+.arrow{
+	height: 100px;
+	margin-top: 300px;
+	right: 200px;
+	z-index: 1;
+	animation-name: arrowMoveRight;
+	animation-duration: 2s;
+	position: relative;
+
+}
+
+@keyframes arrowMoveRight{
+	0%{
+		transform: translate(0px, 0px) rotate(-20deg) scale(0.1);
+		opacity: 0;
+	}
+/*	10%{
+		transform: translate(40px,-30px) rotate(-20deg) scale(0.2);
+		opacity: 1;
+	}
+	30%{
+	transform: translate(150px,-100px) rotate(10deg) scale(0.8);
+	opacity: 1;
+	}*/
+	50%{
+		transform: translate(400px, -180px) rotate(30deg) scale(1.2);
+		opacity: 1;
+	}
+/*	70%{
+	transform: translate(500px,-100px) rotate(40deg) scale(0.8);
+	opacity: 1;
+	}
+	85%{
+		transform: translate(580px, -20px) rotate(50deg) scale(0.7);
+		opacity: 0.9;
+	}*/
+	100%{
+		transform: translate(600px, 0px) rotate(60deg) scale(0.6);
+		opacity: 0;
+	}
+
+
+
+
 }

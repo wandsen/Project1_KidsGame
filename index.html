@@ -2,16 +2,80 @@
 <html>
 <head>
     <title>Math Attack</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <div id="gamebox">
-        <h3>Question:</h3>
-        <div id="questionbox"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center text-uppercase display-4 font-weight-bold text-white bg-info">
+                Math Attack!
+            </div>
+        </div>
+    </div>
 
 
-            <input id="userAnswer" type="text" name="answer" placeholder="answer">
 
+
+    <div class="container-fluid" id="gamebox">
+        <div class="row">
+            <div class="col-1 bg-success text-center"><p id="placeholderQuestion">Question:</p></div>
+            <div class="col-1"><p id="questionNumber"></p></div>
+
+
+            <div class="offset-1 col-2" id="timerSet">
+                <div class="row">
+                    <div class="col-4 bg-warning" id="placeHolderTimer"><p>Timer: </p></div>
+                    <div class="col-4"><p id="timer"></p></div>
+                    <div class="col-4"><p id="totalTime"></p></div>
+                </div>
+            </div>
+
+            <div class="offset-1 col-2">
+                <div>
+                    <select id="question-select" name="Select Equation" onchange="optionEvent(this.value)">
+                        <option value="" disabled selected>Select Equation</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div>
+                    <input type="number" min="1" max ="10" id="select-further" name="Select Digits" onchange="">No.of Digits</input>
+                </div>
+            </div>
+
+
+            <div class="col-1 bg-success text-center"><p id="placeholderPoints">Points:</p></div>
+            <div class="col-1"><p id="points"></p></div>
+        </div>
+
+    <div id="fightingrow" class="row">
+            <div class="col-1"><img id="zelda" src="pictures/zelda.jpg"></div>
+            <div id="weapondiv" class="offset-3 col-1">
+                <!-- <img id="arrow" src="pictures/arrow.jpg"> -->
+            </div>
+            <div class="offset-4 col-1"><img id="dragon" src="pictures/dragon.jpg"></div>
+
+    </div>
+
+
+
+        <div class="row">
+            <div class="col-7 text-center display-4" id="questionbox"></div>
+
+            <div class="col-3 text-center display-4"><input id="userAnswer" type="text" name="answer" placeholder="answer" autocomplete="off"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 display-4"><button id="startButton">Start</button></div>
+        </div>
+
+
+
+        <div id="highScoreBoard"><ul id="highScoreList">Highscore<li>testing</li></ul></div>
 
 
     </div>
